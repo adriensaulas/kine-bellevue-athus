@@ -455,7 +455,7 @@ const TEAM = [
   {
     id: "gsaulas",
     name: "Gaétan Saulas",
-    photo: "/photos/gsaulas.jpg",
+    photo: "/kine-bellevue-athus/public/photos/gsaulas.jpg",
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
