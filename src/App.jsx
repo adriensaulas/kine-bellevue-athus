@@ -264,7 +264,7 @@ const CLINIC = {
 const INSTALLATION_IMAGES = [
   {
     id: "entrance",
-    src: asset("/photos/clinic-entrance.jpg"),
+    src: "photos/clinic-entrance.jpg",
     label: {
       fr: "Entrée du centre et accueil",
       en: "Clinic entrance and reception",
@@ -274,7 +274,7 @@ const INSTALLATION_IMAGES = [
   },
   {
     id: "waiting-room",
-    src: asset("/photos/clinic-waiting-room.jpg"),
+    src: "photos/clinic-waiting-room.jpg",
     label: {
       fr: "Salle d'attente lumineuse",
       en: "Bright waiting room",
@@ -284,7 +284,7 @@ const INSTALLATION_IMAGES = [
   },
   {
     id: "treatment-room",
-    src: asset("/photos/clinic-treatment-room.jpg"),
+    src: "photos/clinic-treatment-room.jpg",
     label: {
       fr: "Salle de traitement équipée",
       en: "Equipped treatment room",
@@ -429,7 +429,7 @@ const TEAM = [
   {
     id: "qmartin",
     name: "Quentin Martin",
-    photo: asset("/photos/qmartin.jpg"),
+    photo: "photos/qmartin.jpg",
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
@@ -455,7 +455,7 @@ const TEAM = [
   {
     id: "gsaulas",
     name: "Gaétan Saulas",
-    photo: asset("/photos/gsaulas.jpg"),
+    photo: "photos/gsaulas.jpg",
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
@@ -481,7 +481,7 @@ const TEAM = [
   {
     id: "asmith",
     name: "Anna Smith",
-    photo: asset("/photos/asmith.jpg"),
+    photo: "photos/asmith.jpg",
     title: {
       fr: "Kinésithérapeute pédiatrique",
       en: "Paediatric physiotherapist",
@@ -507,7 +507,7 @@ const TEAM = [
   {
     id: "mboyer",
     name: "Marie Boyer",
-    photo: asset("/photos/mboyer.jpg"),
+    photo: "photos/mboyer.jpg",
     title: {
       fr: "Kinésithérapeute du sport",
       en: "Sports physiotherapist",
@@ -709,10 +709,6 @@ function classNames(...xs) {
   return xs.filter(Boolean).join(" ");
 }
 
-function asset(path) {
-  return new URL(path, import.meta.env.BASE_URL).toString();
-}
-
 function SectionTitle({ supertitle, title, subtitle }) {
   return (
     <div className="mx-auto max-w-3xl text-center">
@@ -893,7 +889,7 @@ export default function SiteKineBelleVue() {
 
   return (
     <div className="scroll-smooth bg-gradient-to-b from-emerald-50 to-white text-slate-800">
-      {/* SEO metadata à mettre dans public/index.html */}
+      {/* SEO metadata à mettre dans index.html */}
 
       {/* Top bar */}
       <header className="sticky top-0 z-40 border-b border-white/60 bg-white/80 backdrop-blur">
