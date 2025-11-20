@@ -264,7 +264,7 @@ const CLINIC = {
 const INSTALLATION_IMAGES = [
   {
     id: "entrance",
-    src: "/photos/clinic-entrance.jpg",
+    src: asset("/photos/clinic-entrance.jpg"),
     label: {
       fr: "Entrée du centre et accueil",
       en: "Clinic entrance and reception",
@@ -274,7 +274,7 @@ const INSTALLATION_IMAGES = [
   },
   {
     id: "waiting-room",
-    src: "/photos/clinic-waiting-room.jpg",
+    src: asset("/photos/clinic-waiting-room.jpg"),
     label: {
       fr: "Salle d'attente lumineuse",
       en: "Bright waiting room",
@@ -284,7 +284,7 @@ const INSTALLATION_IMAGES = [
   },
   {
     id: "treatment-room",
-    src: "/photos/clinic-treatment-room.jpg",
+    src: asset("/photos/clinic-treatment-room.jpg"),
     label: {
       fr: "Salle de traitement équipée",
       en: "Equipped treatment room",
@@ -429,7 +429,7 @@ const TEAM = [
   {
     id: "qmartin",
     name: "Quentin Martin",
-    photo: "/photos/qmartin.jpg",
+    photo: asset("/photos/qmartin.jpg"),
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
@@ -455,7 +455,7 @@ const TEAM = [
   {
     id: "gsaulas",
     name: "Gaétan Saulas",
-    photo: "/kine-bellevue-athus/public/photos/gsaulas.jpg",
+    photo: asset("/photos/gsaulas.jpg"),
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
@@ -481,7 +481,7 @@ const TEAM = [
   {
     id: "asmith",
     name: "Anna Smith",
-    photo: "/photos/asmith.jpg",
+    photo: asset("/photos/asmith.jpg"),
     title: {
       fr: "Kinésithérapeute pédiatrique",
       en: "Paediatric physiotherapist",
@@ -507,7 +507,7 @@ const TEAM = [
   {
     id: "mboyer",
     name: "Marie Boyer",
-    photo: "/photos/mboyer.jpg",
+    photo: asset("/photos/mboyer.jpg"),
     title: {
       fr: "Kinésithérapeute du sport",
       en: "Sports physiotherapist",
@@ -707,6 +707,10 @@ function ShockwaveIcon() {
 // ————————————————————————————————————————————————
 function classNames(...xs) {
   return xs.filter(Boolean).join(" ");
+}
+
+function asset(path) {
+  return new URL(path, import.meta.env.BASE_URL).toString();
 }
 
 function SectionTitle({ supertitle, title, subtitle }) {
