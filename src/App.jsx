@@ -453,9 +453,9 @@ const TEAM = [
     },
   },
   {
-    id: "gdupont",
-    name: "Guy Dupont",
-    photo: "/photos/gdupont.jpg",
+    id: "gsaulas",
+    name: "Gaétan Saulas",
+    photo: "/photos/gsaulas.jpg",
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
@@ -463,7 +463,7 @@ const TEAM = [
       pt: "Fisioterapeuta",
     },
     phone: "+32 470 33 22 11",
-    email: "guy@kine-athus.be",
+    email: "gaétansaulas@kine-athus.be",
     languages: ["FR"],
     specialties: {
       fr: ["Respiratoire", "Drainage", "Douleurs chroniques"],
@@ -472,10 +472,10 @@ const TEAM = [
       pt: ["Respiratória", "Drenagem linfática", "Dores crónicas"],
     },
     bio: {
-      fr: "Approche douce et structurée, Guy privilégie la respiration, la posture et la rééducation fonctionnelle.",
-      en: "With a gentle and structured approach, Guy focuses on breathing, posture and functional rehabilitation.",
-      lb: "Mat enger sanfter a strukturéierter Approche léit de Guy de Fokus op Otem, Haltung a funktionell Reeducatioun.",
-      pt: "Com uma abordagem suave e estruturada, Guy privilegia a respiração, a postura e a reabilitação funcional.",
+      fr: "Approche douce et structurée, Gaétan privilégie la respiration, la posture et la rééducation fonctionnelle.",
+      en: "With a gentle and structured approach, Gaétan focuses on breathing, posture and functional rehabilitation.",
+      lb: "Mat enger sanfter a strukturéierter Approche léit de Gaétan de Fokus op Otem, Haltung a funktionell Reeducatioun.",
+      pt: "Com uma abordagem suave e estruturada, Gaétan privilegia a respiração, a postura e a reabilitação funcional.",
     },
   },
   {
