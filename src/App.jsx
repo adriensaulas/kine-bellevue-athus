@@ -23,7 +23,7 @@ const I18N = {
       "Soins personnalisés, centrés sur vos objectifs. Évaluation, mouvement, éducation, suivi.",
     heroCTA1: "Prendre rendez-vous",
     heroCTA2: "Poser une question",
-    heroOpen: "Ouvert du lundi au samedi",
+    heroOpen: "Contacter nous pour obtenir nos horaires",
     heroAddressPrefix: "Au cabinet :",
     navServices: "Soins",
     navTeam: "Équipe",
@@ -77,7 +77,7 @@ const I18N = {
       "Personalised care focused on your goals. Assessment, movement, education, follow-up.",
     heroCTA1: "Book an appointment",
     heroCTA2: "Ask a question",
-    heroOpen: "Open from Monday to Saturday",
+    heroOpen: "Contact us to obtain our opening hours",
     heroAddressPrefix: "At the clinic:",
     navServices: "Treatments",
     navTeam: "Team",
@@ -131,7 +131,7 @@ const I18N = {
       "Perséinlech Behandlungen, op Är Ziler ausgeriicht. Evaluatioun, Beweegung, Opklärung, Nobehandlungs-Suivi.",
     heroCTA1: "Rendez-vous huelen",
     heroCTA2: "Fro stellen",
-    heroOpen: "Op vu Méindes bis Samschdes",
+    heroOpen: "Kontaktéiert eis fir eis Öffnungszäiten ze kréien",
     heroAddressPrefix: "Am Cabinet :",
     navServices: "Behandlungen",
     navTeam: "Ekipp",
@@ -185,7 +185,7 @@ const I18N = {
       "Cuidados personalizados, centrados nos seus objetivos. Avaliação, movimento, educação e acompanhamento.",
     heroCTA1: "Marcar consulta",
     heroCTA2: "Colocar uma questão",
-    heroOpen: "Aberto de segunda a sábado",
+    heroOpen: "Contacte-nos para obter os nossos horários.",
     heroAddressPrefix: "No consultório:",
     navServices: "Cuidados",
     navTeam: "Equipa",
@@ -436,8 +436,8 @@ const TEAM = [
       lb: "Kiné",
       pt: "Fisioterapeuta",
     },
-    phone: "+32 470 00 11 22",
-    email: "quentin@kine-athus.be",
+    phone: "",
+    email: "",
     languages: ["FR", "EN"],
     specialties: {
       fr: ["Orthopédique", "Sport", "Thérapie manuelle"],
@@ -617,15 +617,6 @@ function MapPinIcon() {
     <BaseIcon>
       <path d="M21 10c0 5-9 12-9 12S3 15 3 10a9 9 0 1 1 18 0z" />
       <circle cx="12" cy="10" r="3" />
-    </BaseIcon>
-  );
-}
-
-function ClockIcon() {
-  return (
-    <BaseIcon>
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="12 6 12 12 16 14" />
     </BaseIcon>
   );
 }
@@ -834,7 +825,6 @@ function Divider() {
 // ————————————————————————————————————————————————
 export default function SiteKineBelleVue() {
   const [lang, setLang] = useState("fr");
-  const [search, setSearch] = useState("");
   const [activeSpec, setActiveSpec] = useState("ALL");
   const [openId, setOpenId] = useState(null);
   const [consent, setConsent] = useState(() => {
@@ -865,23 +855,12 @@ export default function SiteKineBelleVue() {
   }, [lang]);
 
   const filteredTeam = useMemo(() => {
-    const q = search.trim().toLowerCase();
     return TEAM.filter((m) => {
       const specs = m.specialties[lang] ?? m.specialties.fr;
-      const title = m.title[lang] ?? m.title.fr;
-      const bio = m.bio[lang] ?? m.bio.fr;
-
       const inSpec = activeSpec === "ALL" || specs.includes(activeSpec);
-      const inText =
-        !q ||
-        [m.name, title, m.email, m.phone, ...m.languages, ...specs, bio]
-          .join(" ")
-          .toLowerCase()
-          .includes(q);
-
-      return inSpec && inText;
+      return inSpec ;
     });
-  }, [search, activeSpec, lang]);
+  }, [activeSpec, lang]);
 
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
     CLINIC.mapQuery
@@ -914,9 +893,6 @@ export default function SiteKineBelleVue() {
             </a>
             <a href="#equipe" className="text-sm text-slate-700 hover:text-emerald-700">
               {t.navTeam}
-            </a>
-            <a href="#horaires" className="text-sm text-slate-700 hover:text-emerald-700">
-              {t.navHours}
             </a>
             <a href="#contact" className="text-sm text-slate-700 hover:text-emerald-700">
               {t.navContact}
@@ -978,38 +954,13 @@ export default function SiteKineBelleVue() {
             </div>
           </div>
           <div className="relative">
-            <div className="relative rounded-3xl border border-white/70 bg-white/70 p-4 shadow-lg backdrop-blur">
-              <div className="grid grid-cols-2 gap-4">
-                {SERVICES.slice(0, 4).map((s) => (
-                  <div
-                    key={s.id}
-                    className="rounded-2xl border border-slate-200/70 bg-white/80 p-4"
-                  >
-                    <s.icon />
-                    <p className="mt-3 text-sm font-semibold text-slate-800">
-                      {s.title[lang] ?? s.title.fr}
-                    </p>
-                    <p className="mt-1 text-xs text-slate-500">
-                      {s.desc[lang] ?? s.desc.fr}
-                    </p>
-                  </div>
-                ))}
-                {SERVICES.slice(4, 8).map((s) => (
-                  <div
-                    key={s.id}
-                    className="rounded-2xl border border-slate-200/70 bg-white/80 p-4"
-                  >
-                    <s.icon />
-                    <p className="mt-3 text-sm font-semibold text-slate-800">
-                      {s.title[lang] ?? s.title.fr}
-                    </p>
-                    <p className="mt-1 text-xs text-slate-500">
-                      {s.desc[lang] ?? s.desc.fr}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+           <div className="relative rounded-3xl overflow-hidden border border-white/70 bg-white/70 shadow-lg backdrop-blur">
+            <img
+              src="photos/team-clinic.jpg"
+              alt="Équipe de kinésithérapeutes"
+              className="h-full w-full object-cover"
+            />
+          </div>
           </div>
         </div>
       </section>
@@ -1049,13 +1000,6 @@ export default function SiteKineBelleVue() {
 
         <div className="mx-auto mt-8 max-w-6xl">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="w-full sm:w-1/2">
-              <TextInput
-                value={search}
-                onChange={setSearch}
-                placeholder={t.teamSearchPlaceholder}
-              />
-            </div>
             <div className="flex flex-wrap gap-2">
               <Pill
                 active={activeSpec === "ALL"}
@@ -1081,9 +1025,9 @@ export default function SiteKineBelleVue() {
             {filteredTeam.map((m) => (
               <article
                 key={m.id}
-                className="relative rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm"
+                className="relative rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm flex flex-col justify-between"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 ">
                   {m.photo ? (
                     <img
                       src={m.photo}
@@ -1118,16 +1062,25 @@ export default function SiteKineBelleVue() {
                     className="inline-flex items-center gap-2 hover:text-emerald-700"
                     href={`tel:${m.phone.replace(/\s/g, "")}`}
                   >
-                    <PhoneIcon /> {m.phone}
+                    {m.phone && (
+                      <a
+                        className="inline-flex items-center gap-2 hover:text-emerald-700"
+                        href={`tel:${m.phone.replace(/\s/g, "")}`}
+                      >
+                        <PhoneIcon /> {m.phone}
+                      </a>
+                    )}
                   </a>
+                  {m.email && (
                   <a
                     className="inline-flex items-center gap-2 hover:text-emerald-700"
                     href={`mailto:${m.email}`}
                   >
                     <MailIcon /> {m.email}
                   </a>
+  )}
                 </div>
-                <div className="mt-4 flex gap-2">
+                <div className="mt-4  gap-2">
                   <PrimaryButton
                     className="w-full justify-center"
                     onClick={() => setOpenId(m.id)}
@@ -1143,33 +1096,41 @@ export default function SiteKineBelleVue() {
                     role="dialog"
                     aria-modal="true"
                   >
+
                     <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-white p-6 shadow-xl">
-                      {m.photo && (
-                        <img
-                          src={m.photo}
-                          alt={m.name}
-                          className="mb-4 h-32 w-32 rounded-2xl object-cover"
-                        />
-                      )}
+                    
+                      <div className="flex">
+                          {m.photo && (
+                            <img
+                              src={m.photo}
+                              alt={m.name}
+                              className="mb-4 h-56 w-56 rounded-2xl object-cover self-center mx-auto"
+                            />
+                          )}
+                          <div className="top-0 right-0">
+                            <button
+                              aria-label="Fermer"
+                              className="uppercase rounded-full p-2 hover:bg-slate-100"
+                              onClick={() => setOpenId(null)}
+                            >
+                            <svg
+                              viewBox="0 0 24 24"
+                              className="h-5 w-5"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                            >
+                              <path d="M18 6L6 18M6 6l12 12" />
+                            </svg>
+                          </button>
+                          </div>
+                       
+                      
+                       </div>
                       <div className="flex items-center justify-between">
                         <h3 className="text-xl font-semibold text-slate-900">
                           {m.name}
                         </h3>
-                        <button
-                          aria-label="Fermer"
-                          className="rounded-full p-2 hover:bg-slate-100"
-                          onClick={() => setOpenId(null)}
-                        >
-                          <svg
-                            viewBox="0 0 24 24"
-                            className="h-5 w-5"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                          >
-                            <path d="M18 6L6 18M6 6l12 12" />
-                          </svg>
-                        </button>
                       </div>
                       <p className="mt-1 text-slate-600">
                         {m.title[lang] ?? m.title.fr}
@@ -1183,18 +1144,22 @@ export default function SiteKineBelleVue() {
                         ))}
                       </div>
                       <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        <a
-                          href={`tel:${m.phone.replace(/\s/g, "")}`}
-                          className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-2.5 font-medium text-emerald-700"
-                        >
-                          <PhoneIcon /> {t.teamCall(m.name.split(" ")[0])}
-                        </a>
-                        <a
-                          href={`mailto:${m.email}`}
-                          className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 font-medium text-white"
-                        >
-                          <MailIcon /> {t.teamWrite}
-                        </a>
+                        {m.phone && (
+                          <a
+                            href={`tel:${m.phone.replace(/\s/g, "")}`}
+                            className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-2.5 font-medium text-emerald-700"
+                          >
+                            <PhoneIcon /> {t.teamCall(m.name.split(" ")[0])}
+                          </a>
+                        )}
+                        {m.email && (
+                          <a
+                            href={`mailto:${m.email}`}
+                            className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 font-medium text-white"
+                          >
+                            <MailIcon /> {t.teamWrite}
+                          </a>
+                        )}
                       </div>
                       <div className="mt-4 text-sm text-slate-600">
                         {t.teamLanguages}: {m.languages.join(", ")}
@@ -1231,37 +1196,6 @@ export default function SiteKineBelleVue() {
               </figcaption>
             </figure>
           ))}
-        </div>
-      </section>
-
-      {/* Hours */}
-      <section id="horaires" className="px-4 py-14">
-        <SectionTitle
-          supertitle={t.hoursSupertitle}
-          title={t.hoursTitle}
-          subtitle={t.hoursSubtitle}
-        />
-        <div className="mx-auto mt-8 max-w-3xl overflow-hidden rounded-2xl border border-slate-200 bg-white/80 shadow-sm">
-          <table className="w-full text-left text-sm">
-            <tbody>
-              {CLINIC.hours.map((h) => (
-                <tr key={h.day} className="border-b last:border-none">
-                  <td className="px-5 py-3 font-medium text-slate-700">
-                    {h.day}
-                  </td>
-                  <td className="px-5 py-3 text-slate-600">
-                    {h.open && h.close ? (
-                      <span className="inline-flex items-center gap-2">
-                        <ClockIcon /> {h.open} – {h.close}
-                      </span>
-                    ) : (
-                      <span className="text-slate-400">{t.closed}</span>
-                    )}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </section>
 
