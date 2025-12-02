@@ -244,15 +244,6 @@ const CLINIC = {
     city: "6791 Athus",
     country: "Belgique",
   },
-  hours: [
-    { day: "Lundi / Monday", open: "08:00", close: "20:00" },
-    { day: "Mardi / Tuesday", open: "08:00", close: "20:00" },
-    { day: "Mercredi / Wednesday", open: "08:00", close: "20:00" },
-    { day: "Jeudi / Thursday", open: "08:00", close: "20:00" },
-    { day: "Vendredi / Friday", open: "08:00", close: "20:00" },
-    { day: "Samedi / Saturday", open: null, close: null },
-    { day: "Dimanche / Sunday", open: null, close: null },
-  ],
   mapQuery: "Avenue de la Libération 39, Athus, Belgique",
   socials: {
     facebook: "#",
@@ -755,15 +746,6 @@ function PrimaryButton({ children, href, onClick, className }) {
   const base = (
     <span className="inline-flex items-center gap-2">
       {children}
-      <svg
-        viewBox="0 0 24 24"
-        className="h-5 w-5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-      >
-        <path d="M5 12h14M13 5l7 7-7 7" />
-      </svg>
     </span>
   );
   return href ? (
@@ -826,7 +808,6 @@ function Divider() {
 export default function SiteKineBelleVue() {
   const [lang, setLang] = useState("fr");
   const [activeSpec, setActiveSpec] = useState("ALL");
-  const [openId, setOpenId] = useState(null);
   const [consent, setConsent] = useState(() => {
     if (typeof window === "undefined") return true;
     return localStorage.getItem("kine-consent") === "ok";
@@ -884,7 +865,7 @@ export default function SiteKineBelleVue() {
               </p>
             </div>
           </a>
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="items-center gap-6 md:flex">
             <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
               {t.navServices}
             </a>
@@ -937,9 +918,11 @@ export default function SiteKineBelleVue() {
             <p className="mt-4 text-lg text-slate-600">{t.heroSubtitle}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <PrimaryButton href={`tel:${CLINIC.phone.replace(/\s/g, "")}`}>
+                <PhoneIcon />
                 {t.heroCTA1}
               </PrimaryButton>
               <SecondaryButton href={`mailto:${CLINIC.email}`}>
+                <MailIcon />
                 {t.heroCTA2}
               </SecondaryButton>
             </div>
@@ -1028,20 +1011,22 @@ export default function SiteKineBelleVue() {
                 className="relative rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm flex flex-col justify-between"
               >
                 <div className="flex items-start gap-4 ">
-                  {m.photo ? (
+
+                {m.photo ? (
                     <img
                       src={m.photo}
                       alt={m.name}
-                      className="h-14 w-14 rounded-2xl object-cover"
+                      className="h-32 w-32 rounded-2xl object-cover justify-center items-center"
                     />
                   ) : (
-                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-xl font-semibold text-white">
+                    <div className="h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-xl font-semibold text-white">
                       {m.name
                         .split(" ")
                         .map((x) => x[0])
                         .join("")}
                     </div>
                   )}
+                  
                   <div className="min-w-0">
                     <h3 className="truncate text-lg font-semibold text-slate-900">
                       {m.name}
@@ -1055,6 +1040,11 @@ export default function SiteKineBelleVue() {
                       ))}
                     </div>
                   </div>
+                </div>
+                <div className="flex items-center justify-between">
+                      <p className="mt-4 text-sm text-slate-700">
+                        {m.bio[lang] ?? m.bio.fr}
+                      </p>
                 </div>
                 <Divider />
                 <div className="flex flex-wrap items-center gap-3 text-sm text-slate-700">
@@ -1078,95 +1068,8 @@ export default function SiteKineBelleVue() {
                   >
                     <MailIcon /> {m.email}
                   </a>
-  )}
+  )}          
                 </div>
-                <div className="mt-4  gap-2">
-                  <PrimaryButton
-                    className="w-full justify-center"
-                    onClick={() => setOpenId(m.id)}
-                  >
-                    {t.teamDetailsButton}
-                  </PrimaryButton>
-                </div>
-
-                {/* Modal */}
-                {openId === m.id && (
-                  <div
-                    className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4"
-                    role="dialog"
-                    aria-modal="true"
-                  >
-
-                    <div className="w-full max-w-lg rounded-3xl border border-white/10 bg-white p-6 shadow-xl">
-                    
-                      <div className="flex">
-                          {m.photo && (
-                            <img
-                              src={m.photo}
-                              alt={m.name}
-                              className="mb-4 h-56 w-56 rounded-2xl object-cover self-center mx-auto"
-                            />
-                          )}
-                          <div className="top-0 right-0">
-                            <button
-                              aria-label="Fermer"
-                              className="uppercase rounded-full p-2 hover:bg-slate-100"
-                              onClick={() => setOpenId(null)}
-                            >
-                            <svg
-                              viewBox="0 0 24 24"
-                              className="h-5 w-5"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                            >
-                              <path d="M18 6L6 18M6 6l12 12" />
-                            </svg>
-                          </button>
-                          </div>
-                       
-                      
-                       </div>
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-semibold text-slate-900">
-                          {m.name}
-                        </h3>
-                      </div>
-                      <p className="mt-1 text-slate-600">
-                        {m.title[lang] ?? m.title.fr}
-                      </p>
-                      <p className="mt-4 text-sm text-slate-700">
-                        {m.bio[lang] ?? m.bio.fr}
-                      </p>
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {(m.specialties[lang] ?? m.specialties.fr).map((s) => (
-                          <Badge key={s}>{s}</Badge>
-                        ))}
-                      </div>
-                      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                        {m.phone && (
-                          <a
-                            href={`tel:${m.phone.replace(/\s/g, "")}`}
-                            className="inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-2.5 font-medium text-emerald-700"
-                          >
-                            <PhoneIcon /> {t.teamCall(m.name.split(" ")[0])}
-                          </a>
-                        )}
-                        {m.email && (
-                          <a
-                            href={`mailto:${m.email}`}
-                            className="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 font-medium text-white"
-                          >
-                            <MailIcon /> {t.teamWrite}
-                          </a>
-                        )}
-                      </div>
-                      <div className="mt-4 text-sm text-slate-600">
-                        {t.teamLanguages}: {m.languages.join(", ")}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </article>
             ))}
           </div>
