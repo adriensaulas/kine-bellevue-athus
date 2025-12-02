@@ -894,7 +894,7 @@ export default function SiteKineBelleVue() {
               </p>
             </div>
           </a>
-          <nav className={`flex gap-6 hidden}`}>
+          <nav className={`flex gap-6 hidden`}>
               <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
                 {t.navServices}
               </a>
