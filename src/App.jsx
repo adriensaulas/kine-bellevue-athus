@@ -894,7 +894,7 @@ export default function SiteKineBelleVue() {
               </p>
             </div>
           </a>
-          <nav className={`flex gap-6 hidden`}>
+          <nav className={`gap-6  hidden md:flex`}>
               <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
                 {t.navServices}
               </a>
@@ -908,7 +908,7 @@ export default function SiteKineBelleVue() {
                 {t.navContact}
               </a>
             </nav>
-          <div className="md:hidden">
+          <div className="hidden">
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
               className="flex items-center justify-center rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-medium text-white shadow-sm"
