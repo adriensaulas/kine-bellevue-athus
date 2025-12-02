@@ -908,7 +908,7 @@ export default function SiteKineBelleVue() {
                 {t.navContact}
               </a>
             </nav>
-          <div className="hidden">
+          <div className="hidden md:flex">
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
               className="flex items-center justify-center rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-medium text-white shadow-sm"
