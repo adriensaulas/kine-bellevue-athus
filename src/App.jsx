@@ -915,7 +915,7 @@ export default function SiteKineBelleVue() {
             >
               {mobileNavOpen ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
             </button>
-            <nav className={`flex flex-col gap-6 md:hidden ${mobileNavOpen ? "" : "hidden"}`}>
+            <nav className={`flex flex-col gap-6 pt-4 md:hidden ${mobileNavOpen ? "" : "hidden"}`}>
               <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
                 {t.navServices}
               </a>
