@@ -684,6 +684,34 @@ function ShockwaveIcon() {
   );
 }
 
+function MenuIcon({ className }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className={className}
+    >
+      <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function XIcon({ className }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className={className}
+    >
+      <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 // ————————————————————————————————————————————————
 // Small helpers
 // ————————————————————————————————————————————————
@@ -812,6 +840,7 @@ export default function SiteKineBelleVue() {
     if (typeof window === "undefined") return true;
     return localStorage.getItem("kine-consent") === "ok";
   });
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   const t = I18N[lang] ?? I18N.fr;
 
@@ -865,20 +894,42 @@ export default function SiteKineBelleVue() {
               </p>
             </div>
           </a>
-          <nav className="items-center gap-6 md:flex">
-            <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
-              {t.navServices}
-            </a>
-            <a href="#installation" className="text-sm text-slate-700 hover:text-emerald-700">
-              {t.installationSupertitle}
-            </a>
-            <a href="#equipe" className="text-sm text-slate-700 hover:text-emerald-700">
-              {t.navTeam}
-            </a>
-            <a href="#contact" className="text-sm text-slate-700 hover:text-emerald-700">
-              {t.navContact}
-            </a>
-          </nav>
+          <nav className={`flex gap-6 hidden}`}>
+              <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.navServices}
+              </a>
+              <a href="#installation" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.installationSupertitle}
+              </a>
+              <a href="#equipe" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.navTeam}
+              </a>
+              <a href="#contact" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.navContact}
+              </a>
+            </nav>
+          <div className="md:hidden">
+            <button
+              onClick={() => setMobileNavOpen(!mobileNavOpen)}
+              className="flex items-center justify-center rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-medium text-white shadow-sm"
+            >
+              {mobileNavOpen ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
+            </button>
+            <nav className={`flex flex-col gap-6 md:hidden ${mobileNavOpen ? "" : "hidden"}`}>
+              <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.navServices}
+              </a>
+              <a href="#installation" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.installationSupertitle}
+              </a>
+              <a href="#equipe" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.navTeam}
+              </a>
+              <a href="#contact" className="text-sm text-slate-700 hover:text-emerald-700">
+                {t.navContact}
+              </a>
+            </nav>
+          </div>
           <div className="hidden items-center gap-3 md:flex">
             <div className="flex items-center gap-1 rounded-full border border-slate-200 bg-white/70 px-2 py-1 text-xs font-medium text-slate-700">
               {LANGS.map((l) => (
