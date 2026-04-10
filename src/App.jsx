@@ -33,13 +33,15 @@ const I18N = {
     servicesTitle: "Nous vous accompagnons à chaque étape",
     servicesSubtitle:
       "Après blessure, chirurgie ou pour une douleur persistante, notre équipe vous guide vers un mouvement plus libre.",
+    noContactInfo:
+      "Aucune information de contact disponible merci de contacter le cabinet.",
     installationSupertitle: "Installation",
-    installationTitle: "Vos soins dans un cadre calme et lumineux",
+    installationTitle: "Vos soins dans une cadre dynamique et chaleureux",
     installationSubtitle:
       "Quelques images du centre pour vous aider à vous repérer et à vous projeter avant votre venue.",
     teamSupertitle: "Équipe",
     teamTitle: "Des kinés à l'écoute, formés en continu",
-    teamSubtitle: "Choisissez le profil qui vous convient et contactez-le directement.",
+    teamSubtitle: "Choisissez le profil qui vous convient.",
     teamSearchPlaceholder: "Rechercher un nom, une spécialité, une langue…",
     teamAll: "Tout",
     teamDetailsButton: "Fiche détaillée",
@@ -87,13 +89,15 @@ const I18N = {
     servicesTitle: "We support you at every step",
     servicesSubtitle:
       "After injury, surgery or for persistent pain, our team guides you towards easier movement.",
+    noContactInfo:
+      "No contact information available, please contact the clinic.",
     installationSupertitle: "Installation",
-    installationTitle: "Your care in a calm and bright setting",
+    installationTitle: "Your care in a dynamic and welcoming environment",
     installationSubtitle:
       "A few pictures of the clinic to help you visualise the space before your visit.",
     teamSupertitle: "Team",
     teamTitle: "Physiotherapists who listen",
-    teamSubtitle: "Choose the profile that suits you and contact them directly.",
+    teamSubtitle: "Choose the profile that suits you.",
     teamSearchPlaceholder: "Search a name, speciality, language…",
     teamAll: "All",
     teamDetailsButton: "Full profile",
@@ -106,8 +110,7 @@ const I18N = {
     closed: "Closed",
     contactSupertitle: "Contact & access",
     contactTitle: "Let's talk about your goal",
-    contactSubtitle:
-      "Call us, write to us or come and see us at the clinic.",
+    contactSubtitle: "Call us, write to us or come and see us at the clinic.",
     contactFormName: "Name",
     contactFormEmail: "Email",
     contactFormMessage: "Message",
@@ -141,13 +144,15 @@ const I18N = {
     servicesTitle: "Mir begleeden Iech op all Schratt",
     servicesSubtitle:
       "No Verletzung, Operatioun oder bei längerfristeger Péng hëllefe mir Iech erëm fräi ze beweegen.",
+    noContactInfo:
+      "Keng Kontaktinformatioun disponibel, w.e.g. kontaktéiert de Cabinet.",
     installationSupertitle: "Installatioun",
-    installationTitle: "Är Behandlungen an engem rouege, helle Kader",
+    installationTitle: "Är Fleeg an engem dynameschen a waarme Kader",
     installationSubtitle:
       "E puer Biller vum Cabinet, fir Iech virun Ärem Rendez-vous e Bild ze maachen.",
     teamSupertitle: "Ekipp",
     teamTitle: "Kinéen, déi nolauschteren",
-    teamSubtitle: "Sicht Iech de Profil aus, deen am beschte bei Iech passt.",
+    teamSubtitle: "Sicht Iech de Profil aus.",
     teamSearchPlaceholder: "Numm, Spezialisatioun oder Sprooch sichen…",
     teamAll: "All",
     teamDetailsButton: "Detail-Profil",
@@ -160,8 +165,7 @@ const I18N = {
     closed: "Zou",
     contactSupertitle: "Kontakt & Accès",
     contactTitle: "Schwätze mir iwwer Är Ziler",
-    contactSubtitle:
-      "Rufft eis un, schreift eis oder kommt laanscht.",
+    contactSubtitle: "Rufft eis un, schreift eis oder kommt laanscht.",
     contactFormName: "Numm",
     contactFormEmail: "Email",
     contactFormMessage: "Message",
@@ -195,14 +199,16 @@ const I18N = {
     servicesTitle: "Acompanhamos-o em cada etapa",
     servicesSubtitle:
       "Após lesão, cirurgia ou em caso de dor persistente, ajudamo-lo a reencontrar um movimento mais livre.",
+    noContactInfo:
+      "Nenhuma informação de contacto disponível, por favor contacte o consultório.",
     installationSupertitle: "Instalações",
-    installationTitle: "Os seus cuidados num espaço calmo e luminoso",
+    installationTitle: "Os seus cuidados num ambiente dinâmico e acolhedor",
     installationSubtitle:
       "Algumas imagens da clínica para o ajudar a visualizar o espaço antes da sua visita.",
     teamSupertitle: "Equipa",
     teamTitle: "Fisioterapeutas atentos",
     teamSubtitle:
-      "Escolha o perfil que melhor corresponde às suas necessidades e contacte-o diretamente.",
+      "Escolha o perfil que melhor corresponde às suas necessidades.",
     teamSearchPlaceholder: "Procurar nome, especialidade, língua…",
     teamAll: "Todos",
     teamDetailsButton: "Perfil completo",
@@ -215,8 +221,7 @@ const I18N = {
     closed: "Fechado",
     contactSupertitle: "Contacto & acesso",
     contactTitle: "Falemos sobre o seu objetivo",
-    contactSubtitle:
-      "Telefone-nos, envie-nos um email ou venha visitar-nos.",
+    contactSubtitle: "Telefone-nos, envie-nos um email ou venha visitar-nos.",
     contactFormName: "Nome",
     contactFormEmail: "Email",
     contactFormMessage: "Mensagem",
@@ -255,32 +260,32 @@ const CLINIC = {
 const INSTALLATION_IMAGES = [
   {
     id: "entrance",
-    src: "photos/clinic-entrance.jpg",
+    src: "photos/clinic-room-1.jpg",
     label: {
-      fr: "Entrée du centre et accueil",
-      en: "Clinic entrance and reception",
-      lb: "Entrée an Empfang vum Zentrum",
-      pt: "Entrada do centro e receção",
+      fr: "Salle de soin commune",
+      en: "Common treatment room",
+      lb: "Gemengen Behandlungsraum",
+      pt: "Sala de tratamento comum",
     },
   },
   {
     id: "waiting-room",
-    src: "photos/clinic-waiting-room.jpg",
+    src: "photos/clinic-room-2.jpg",
     label: {
-      fr: "Salle d'attente lumineuse",
-      en: "Bright waiting room",
-      lb: "Hell Sall d'Attente",
-      pt: "Sala de espera luminosa",
+      fr: "Salle de soin privée",
+      en: "Private treatment room",
+      lb: "Privaten Behandlungsraum",
+      pt: "Sala de tratamento privada",
     },
   },
   {
     id: "treatment-room",
-    src: "photos/clinic-treatment-room.jpg",
+    src: "photos/clinic-room-3.jpg",
     label: {
-      fr: "Salle de traitement équipée",
-      en: "Equipped treatment room",
-      lb: "Equipéiert Behandlungsraum",
-      pt: "Sala de tratamento equipada",
+      fr: "Salle de sport et de rééducation",
+      en: "Gym and rehabilitation room",
+      lb: "Sport- a Reeducatiounsraum",
+      pt: "Sala de ginásio e reabilitação",
     },
   },
 ];
@@ -351,22 +356,6 @@ const SERVICES = [
     },
   },
   {
-    id: "perinatal",
-    icon: BabyIcon,
-    title: {
-      fr: "Pré / Post-natal",
-      en: "Pre / post-natal care",
-      lb: "Pré / Post-natal Betreiung",
-      pt: "Cuidados pré / pós-natais",
-    },
-    desc: {
-      fr: "Préparation, récupération et prise en charge périnéale.",
-      en: "Preparation, recovery and pelvic floor management.",
-      lb: "Preparatioun, Rehabilitatioun an peri-natal Beckenbuedem-Betreiung.",
-      pt: "Preparação, recuperação e tratamento do pavimento pélvico.",
-    },
-  },
-  {
     id: "lymph",
     icon: LymphIcon,
     title: {
@@ -416,109 +405,201 @@ const SERVICES = [
   },
 ];
 
+// ————————————————————————————————————————————————
+// Données équipe — sans photo, bio, téléphone et email personnels
+// ————————————————————————————————————————————————
 const TEAM = [
   {
-    id: "qmartin",
-    name: "Quentin Martin",
-    photo: "photos/qmartin.jpg",
+    id: "mpToussaint",
+    name: "Marie-Paule Toussaint",
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
       lb: "Kiné",
       pt: "Fisioterapeuta",
     },
-    phone: "",
-    email: "",
-    languages: ["FR", "EN"],
+    languages: ["FR"],
     specialties: {
-      fr: ["Orthopédique", "Sport", "Thérapie manuelle"],
-      en: ["Orthopaedics", "Sports", "Manual therapy"],
-      lb: ["Orthopädie", "Sport", "Manuell Therapie"],
-      pt: ["Ortopedia", "Desporto", "Terapia manual"],
-    },
-    bio: {
-      fr: "Passionné par le retour au mouvement, Quentin combine éducation thérapeutique et renforcement progressif.",
-      en: "Passionate about helping people move again, Quentin combines patient education with progressive strengthening.",
-      lb: "Quentin ass begeeschtert dovun, Leit erëm an d’Beweegung ze bréngen a kombinéiert Opklärung mat progressivem Kraafttraining.",
-      pt: "Apaixonado por devolver o movimento às pessoas, Quentin combina educação terapêutica com reforço progressivo.",
+      fr: [
+        "Kiné respiratoire adultes",
+        "Ortho-traumato",
+        "Kiné respiratoire bébé",
+        "Gériatrie",
+        "Kiné générale",
+        "Drainage lymphatique",
+        "Oncologie",
+      ],
+      en: [
+        "Adult respiratory physiotherapy",
+        "Ortho-trauma",
+        "Baby respiratory physiotherapy",
+        "Geriatrics",
+        "General physiotherapy",
+        "Manual therapy",
+        "Lymphatic drainage",
+        "Oncology",
+      ],
+      lb: [
+        "Otem-Kiné Erwuessener",
+        "Ortho-Trauma",
+        "Otem-Kiné Bébien",
+        "Geriatrie",
+        "Allgemeng Kiné",
+        "Thérapie manuelle",
+        "Lymphdrainage",
+        "Oncologie",
+      ],
+      pt: [
+        "Fisioterapia respiratória adultos",
+        "Fisioterapia orto-traumática",
+        "Fisioterapia respiratória bebés",
+        "Geriatria",
+        "Terapia manual",
+        "Drenagem linfática",
+        "Oncologia",
+      ],
     },
   },
   {
     id: "gsaulas",
     name: "Gaétan Saulas",
-    photo: "photos/gsaulas.jpg",
     title: {
       fr: "Kinésithérapeute",
       en: "Physiotherapist",
       lb: "Kiné",
       pt: "Fisioterapeuta",
     },
-    phone: "+32 470 33 22 11",
-    email: "gaétansaulas@kine-athus.be",
     languages: ["FR"],
     specialties: {
-      fr: ["Respiratoire", "Drainage", "Douleurs chroniques"],
-      en: ["Respiratory", "Lymphatic drainage", "Chronic pain"],
-      lb: ["Otem", "Lymphdrainage", "Chronesch Péng"],
-      pt: ["Respiratória", "Drenagem linfática", "Dores crónicas"],
-    },
-    bio: {
-      fr: "Approche douce et structurée, Gaétan privilégie la respiration, la posture et la rééducation fonctionnelle.",
-      en: "With a gentle and structured approach, Gaétan focuses on breathing, posture and functional rehabilitation.",
-      lb: "Mat enger sanfter a strukturéierter Approche léit de Gaétan de Fokus op Otem, Haltung a funktionell Reeducatioun.",
-      pt: "Com uma abordagem suave e estruturada, Gaétan privilegia a respiração, a postura e a reabilitação funcional.",
-    },
-  },
-  {
-    id: "asmith",
-    name: "Anna Smith",
-    photo: "photos/asmith.jpg",
-    title: {
-      fr: "Kinésithérapeute pédiatrique",
-      en: "Paediatric physiotherapist",
-      lb: "Pediatrie-Kiné",
-      pt: "Fisioterapeuta pediátrica",
-    },
-    phone: "+32 470 55 77 88",
-    email: "anna@kine-athus.be",
-    languages: ["FR", "EN", "NL"],
-    specialties: {
-      fr: ["Pédiatrie", "Respiratoire", "Pré / Post-natal"],
-      en: ["Paediatrics", "Respiratory", "Pre / post-natal"],
-      lb: ["Pediatrie", "Otem", "Pré / Post-natal"],
-      pt: ["Pediatria", "Respiratória", "Pré / pós-natal"],
-    },
-    bio: {
-      fr: "Spécialisée en pédiatrie, Anna accompagne bébés et enfants avec bienveillance et pédagogie.",
-      en: "Specialised in paediatrics, Anna supports babies and children with care and clear explanations.",
-      lb: "Als spezialiséiert Pediatrie-Kiné betreit d’Anna Bébien a Kanner mat vill Empathie an Erklärungen.",
-      pt: "Especializada em pediatria, Anna acompanha bebés e crianças com muita atenção e pedagogia.",
+      fr: [
+        "Kiné respiratoire adultes",
+        "Gériatrie",
+        "Kiné générale",
+        "Ortho-traumato",
+      ],
+      en: [
+        "Adult respiratory physiotherapy",
+        "Geriatrics",
+        "General physiotherapy",
+        "Ortho-trauma",
+      ],
+      lb: [
+        "Otem-Kiné Erwuessener",
+        "Geriatrie",
+        "Allgemeng Kiné",
+        "Ortho-Trauma",
+      ],
+      pt: [
+        "Fisioterapia respiratória adultos",
+        "Geriatria",
+        "Fisioterapia geral",
+        "Fisioterapia orto-traumática",
+      ],
     },
   },
   {
-    id: "mboyer",
-    name: "Marie Boyer",
-    photo: "photos/mboyer.jpg",
+    id: "eBlampain",
+    name: "Emilien Blampain",
     title: {
       fr: "Kinésithérapeute du sport",
       en: "Sports physiotherapist",
       lb: "Sport-Kiné",
       pt: "Fisioterapeuta desportiva",
     },
-    phone: "+32 470 66 00 44",
-    email: "marie@kine-athus.be",
-    languages: ["FR", "EN", "DE"],
+    languages: ["FR", "EN"],
     specialties: {
-      fr: ["Sport", "Orthopédique"],
-      en: ["Sports", "Orthopaedics"],
-      lb: ["Sport", "Orthopädie"],
-      pt: ["Desporto", "Ortopedia"],
+      fr: [
+        "Kiné général",
+        "Ortho-traumato",
+        "Kiné sportive",
+        "Thérapie manuelle",
+      ],
+      en: [
+        "General physiotherapy",
+        "Ortho-trauma",
+        "Sports physiotherapy",
+        "Manual therapy",
+      ],
+      lb: ["Allgemeng Kiné", "Ortho-Trauma", "Sport-Kiné", "Thérapie manuelle"],
+      pt: [
+        "Fisioterapia geral",
+        "Fisioterapia orto-traumática",
+        "Fisioterapia desportiva",
+        "Terapia manual",
+      ],
     },
-    bio: {
-      fr: "Marie élabore des plans de charge progressifs pour un retour au sport durable et sans rechute.",
-      en: "Marie builds progressive training plans for a sustainable, relapse-free return to sport.",
-      lb: "D’Marie erstellt progressiv Belaaschtungspläng fir e laangfristege Retour an de Sport ouni Réckfall.",
-      pt: "Marie constrói planos de carga progressivos para um regresso ao desporto duradouro e sem recaídas.",
+  },
+  {
+    id: "aWenkin",
+    name: "Aline Wenkin",
+    title: {
+      fr: "Kinésithérapeute",
+      en: "Physiotherapist",
+      lb: "Kiné",
+      pt: "Fisioterapeuta",
+    },
+    languages: ["FR"],
+    specialties: {
+      fr: [
+        "Kiné respiratoire bébé",
+        "Kiné générale",
+        "Kiné respiratoire adultes",
+        "Ortho-traumato",
+        "Drainage lymphatique",
+      ],
+      en: [
+        "Baby respiratory physiotherapy",
+        "General physiotherapy",
+        "Adult respiratory physiotherapy",
+        "Ortho-trauma",
+        "Lymphatic drainage",
+      ],
+      lb: [
+        "Otem-Kiné Bébien",
+        "Allgemeng Kiné",
+        "Otem-Kiné Erwuessener",
+        "Ortho-Trauma",
+        "Lymphdrainage",
+      ],
+      pt: [
+        "Fisioterapia respiratória bebés",
+        "Fisioterapia geral",
+        "Fisioterapia respiratória adultos",
+        "Fisioterapia orto-traumática",
+        "Drenagem linfática",
+      ],
+    },
+  },
+  {
+    id: "vEloy",
+    name: "Victor Eloy",
+    title: {
+      fr: "Kinésithérapeute du sport",
+      en: "Sports physiotherapist",
+      lb: "Sport-Kiné",
+      pt: "Fisioterapeuta desportiva",
+    },
+    languages: ["FR", "EN"],
+    specialties: {
+      fr: [
+        "Kiné sportive",
+        "Kiné générale",
+        "Ortho-traumato",
+        "Thérapie manuelle",
+      ],
+      en: [
+        "Sports physiotherapy",
+        "General physiotherapy",
+        "Ortho-trauma",
+        "Manual therapy",
+      ],
+      lb: ["Sport-Kiné", "Allgemeng Kiné", "Ortho-Trauma", "Thérapie manuelle"],
+      pt: [
+        "Fisioterapia desportiva",
+        "Fisioterapia geral",
+        "Fisioterapia orto-traumática",
+        "Terapia manual",
+      ],
     },
   },
 ];
@@ -544,45 +625,11 @@ function BaseIcon({ children }) {
 
 function LogoBelleVue({ className }) {
   return (
-    <svg
-      viewBox="0 0 64 64"
-      aria-hidden="true"
+    <img
+      src="public/photos/logo.png"
+      alt="Logo Centre de Kiné Belle-Vue"
       className={className}
-    >
-      <defs>
-        <linearGradient id="bv-grad" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0" stopColor="#059669" />
-          <stop offset="1" stopColor="#10b981" />
-        </linearGradient>
-      </defs>
-      <rect
-        x="4"
-        y="4"
-        width="56"
-        height="56"
-        rx="20"
-        fill="url(#bv-grad)"
-      />
-      {/* colline / belle-vue */}
-      <path
-        d="M10 40c6-6 12-9 18-9s12 3 18 9"
-        fill="none"
-        stroke="#ecfdf5"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      {/* colonne vertébrale stylisée */}
-      <path
-        d="M32 16c-2 2-3 4-3 7 0 3 1 5 3 7 2 2 3 4 3 7 0 3-1 5-3 7"
-        fill="none"
-        stroke="#ecfdf5"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <circle cx="32" cy="16" r="2.4" fill="#ecfdf5" />
-      {/* point de vue */}
-      <circle cx="44" cy="22" r="2" fill="#a7f3d0" />
-    </svg>
+    />
   );
 }
 
@@ -693,7 +740,11 @@ function MenuIcon({ className }) {
       strokeWidth="1.8"
       className={className}
     >
-      <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M3 6h18M3 12h18M3 18h18"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -707,7 +758,11 @@ function XIcon({ className }) {
       strokeWidth="1.8"
       className={className}
     >
-      <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M18 6L6 18M6 6l12 12"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -751,7 +806,7 @@ function Pill({ children, active, onClick }) {
         "rounded-full border px-3 py-1 text-sm transition",
         active
           ? "border-emerald-600 bg-emerald-600 text-white shadow"
-          : "border-slate-200 bg-white text-slate-700 hover:border-emerald-300 hover:text-emerald-700"
+          : "border-slate-200 bg-white text-slate-700 hover:border-emerald-300 hover:text-emerald-700",
       )}
     >
       {children}
@@ -759,29 +814,16 @@ function Pill({ children, active, onClick }) {
   );
 }
 
-function TextInput({ value, onChange, placeholder }) {
-  return (
-    <input
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      placeholder={placeholder}
-      className="w-full rounded-xl border border-slate-200 bg-white/80 px-4 py-2.5 text-slate-800 shadow-sm outline-none ring-emerald-500/20 placeholder:text-slate-400 focus:ring"
-    />
-  );
-}
-
 function PrimaryButton({ children, href, onClick, className }) {
   const base = (
-    <span className="inline-flex items-center gap-2">
-      {children}
-    </span>
+    <span className="inline-flex items-center gap-2">{children}</span>
   );
   return href ? (
     <a
       href={href}
       className={classNames(
         "inline-flex items-center justify-center rounded-xl bg-emerald-600 px-5 py-2.5 font-medium text-white shadow-sm transition hover:bg-emerald-700",
-        className
+        className,
       )}
     >
       {base}
@@ -791,7 +833,7 @@ function PrimaryButton({ children, href, onClick, className }) {
       onClick={onClick}
       className={classNames(
         "inline-flex items-center justify-center rounded-xl bg-emerald-600 px-5 py-2.5 font-medium text-white shadow-sm transition hover:bg-emerald-700",
-        className
+        className,
       )}
     >
       {base}
@@ -800,13 +842,15 @@ function PrimaryButton({ children, href, onClick, className }) {
 }
 
 function SecondaryButton({ children, href, onClick, className }) {
-  const base = <span className="inline-flex items-center gap-2">{children}</span>;
+  const base = (
+    <span className="inline-flex items-center gap-2">{children}</span>
+  );
   return href ? (
     <a
       href={href}
       className={classNames(
         "inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white/70 px-4 py-2.5 font-medium text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700",
-        className
+        className,
       )}
     >
       {base}
@@ -816,7 +860,7 @@ function SecondaryButton({ children, href, onClick, className }) {
       onClick={onClick}
       className={classNames(
         "inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white/70 px-4 py-2.5 font-medium text-slate-700 shadow-sm transition hover:border-emerald-300 hover:text-emerald-700",
-        className
+        className,
       )}
     >
       {base}
@@ -867,26 +911,21 @@ export default function SiteKineBelleVue() {
   const filteredTeam = useMemo(() => {
     return TEAM.filter((m) => {
       const specs = m.specialties[lang] ?? m.specialties.fr;
-      const inSpec = activeSpec === "ALL" || specs.includes(activeSpec);
-      return inSpec ;
+      return activeSpec === "ALL" || specs.includes(activeSpec);
     });
   }, [activeSpec, lang]);
 
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(
-    CLINIC.mapQuery
+    CLINIC.mapQuery,
   )}&output=embed`;
 
   return (
     <div className="scroll-smooth bg-gradient-to-b from-emerald-50 to-white text-slate-800">
-      {/* SEO metadata à mettre dans index.html */}
-
       {/* Top bar */}
       <header className="sticky top-0 z-40 border-b border-white/60 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="#accueil" className="flex items-center gap-3">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-2xl bg-emerald-600/90 text-white shadow-sm">
-              <LogoBelleVue className="h-8 w-8" />
-            </div>
+            <LogoBelleVue className="h-24 w-24" />
             <div>
               <p className="text-base font-semibold">{CLINIC.name}</p>
               <p className="text-xs text-slate-500">
@@ -894,38 +933,68 @@ export default function SiteKineBelleVue() {
               </p>
             </div>
           </a>
-          <nav className={`gap-6  hidden md:flex`}>
-              <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
-                {t.navServices}
-              </a>
-              <a href="#installation" className="text-sm text-slate-700 hover:text-emerald-700">
-                {t.installationSupertitle}
-              </a>
-              <a href="#equipe" className="text-sm text-slate-700 hover:text-emerald-700">
-                {t.navTeam}
-              </a>
-              <a href="#contact" className="text-sm text-slate-700 hover:text-emerald-700">
-                {t.navContact}
-              </a>
-            </nav>
-          <div className="hidden md:flex">
+          <nav className={`flex gap-6 hidden md:flex`}>
+            <a
+              href="#services"
+              className="text-sm text-slate-700 hover:text-emerald-700"
+            >
+              {t.navServices}
+            </a>
+            <a
+              href="#installation"
+              className="text-sm text-slate-700 hover:text-emerald-700"
+            >
+              {t.installationSupertitle}
+            </a>
+            <a
+              href="#equipe"
+              className="text-sm text-slate-700 hover:text-emerald-700"
+            >
+              {t.navTeam}
+            </a>
+            <a
+              href="#contact"
+              className="text-sm text-slate-700 hover:text-emerald-700"
+            >
+              {t.navContact}
+            </a>
+          </nav>
+          <div className="md:hidden">
             <button
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
               className="flex items-center justify-center rounded-full bg-emerald-600/90 px-4 py-2 text-sm font-medium text-white shadow-sm"
             >
-              {mobileNavOpen ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
+              {mobileNavOpen ? (
+                <XIcon className="h-5 w-5" />
+              ) : (
+                <MenuIcon className="h-5 w-5" />
+              )}
             </button>
-            <nav className={`flex flex-col gap-6 pt-4 md:hidden ${mobileNavOpen ? "" : "hidden"}`}>
-              <a href="#services" className="text-sm text-slate-700 hover:text-emerald-700">
+            <nav
+              className={`flex flex-col gap-6 pt-4 md:hidden ${mobileNavOpen ? "" : "hidden"}`}
+            >
+              <a
+                href="#services"
+                className="text-sm text-slate-700 hover:text-emerald-700"
+              >
                 {t.navServices}
               </a>
-              <a href="#installation" className="text-sm text-slate-700 hover:text-emerald-700">
+              <a
+                href="#installation"
+                className="text-sm text-slate-700 hover:text-emerald-700"
+              >
                 {t.installationSupertitle}
               </a>
-              <a href="#equipe" className="text-sm text-slate-700 hover:text-emerald-700">
+              <a
+                href="#equipe"
+                className="text-sm text-slate-700 hover:text-emerald-700"
+              >
                 {t.navTeam}
               </a>
-              <a href="#contact" className="text-sm text-slate-700 hover:text-emerald-700">
+              <a
+                href="#contact"
+                className="text-sm text-slate-700 hover:text-emerald-700"
+              >
                 {t.navContact}
               </a>
             </nav>
@@ -940,7 +1009,7 @@ export default function SiteKineBelleVue() {
                     "rounded-full px-2 py-0.5",
                     lang === l.code
                       ? "bg-emerald-600 text-white"
-                      : "text-slate-600 hover:bg-slate-100"
+                      : "text-slate-600 hover:bg-slate-100",
                   )}
                 >
                   {l.label}
@@ -988,13 +1057,13 @@ export default function SiteKineBelleVue() {
             </div>
           </div>
           <div className="relative">
-           <div className="relative rounded-3xl overflow-hidden border border-white/70 bg-white/70 shadow-lg backdrop-blur">
-            <img
-              src="photos/team-clinic.jpg"
-              alt="Équipe de kinésithérapeutes"
-              className="h-full w-full object-cover"
-            />
-          </div>
+            <div className="relative rounded-3xl overflow-hidden border border-white/70 bg-white/70 shadow-lg backdrop-blur">
+              <img
+                src="photos/team-clinic.jpg"
+                alt="Équipe de kinésithérapeutes"
+                className="h-full w-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -1026,11 +1095,7 @@ export default function SiteKineBelleVue() {
 
       {/* Team */}
       <section id="equipe" className="px-4 py-14">
-        <SectionTitle
-          supertitle={t.teamSupertitle}
-          title={t.teamTitle}
-          subtitle={t.teamSubtitle}
-        />
+        <SectionTitle supertitle={t.teamSupertitle} title={t.teamTitle} />
 
         <div className="mx-auto mt-8 max-w-6xl">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -1059,25 +1124,16 @@ export default function SiteKineBelleVue() {
             {filteredTeam.map((m) => (
               <article
                 key={m.id}
-                className="relative rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm flex flex-col justify-between"
+                className="relative rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm flex flex-col"
               >
-                <div className="flex items-start gap-4 ">
-
-                {m.photo ? (
-                    <img
-                      src={m.photo}
-                      alt={m.name}
-                      className="h-32 w-32 rounded-2xl object-cover justify-center items-center"
-                    />
-                  ) : (
-                    <div className="h-32 w-32 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-xl font-semibold text-white">
-                      {m.name
-                        .split(" ")
-                        .map((x) => x[0])
-                        .join("")}
-                    </div>
-                  )}
-                  
+                {/* Initiales */}
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-700 text-lg font-semibold text-white">
+                    {m.name
+                      .split(" ")
+                      .map((x) => x[0])
+                      .join("")}
+                  </div>
                   <div className="min-w-0">
                     <h3 className="truncate text-lg font-semibold text-slate-900">
                       {m.name}
@@ -1085,41 +1141,19 @@ export default function SiteKineBelleVue() {
                     <p className="text-sm text-slate-600">
                       {m.title[lang] ?? m.title.fr}
                     </p>
-                    <div className="mt-2 flex flex-wrap gap-1">
-                      {(m.specialties[lang] ?? m.specialties.fr).map((s) => (
-                        <Badge key={s}>{s}</Badge>
-                      ))}
-                    </div>
+                    {m.languages && m.languages.length > 0 && (
+                      <p className="mt-1 text-xs text-slate-400">
+                        {m.languages.join(" · ")}
+                      </p>
+                    )}
                   </div>
                 </div>
-                <div className="flex items-center justify-between">
-                      <p className="mt-4 text-sm text-slate-700">
-                        {m.bio[lang] ?? m.bio.fr}
-                      </p>
-                </div>
-                <Divider />
-                <div className="flex flex-wrap items-center gap-3 text-sm text-slate-700">
-                  <a
-                    className="inline-flex items-center gap-2 hover:text-emerald-700"
-                    href={`tel:${m.phone.replace(/\s/g, "")}`}
-                  >
-                    {m.phone && (
-                      <a
-                        className="inline-flex items-center gap-2 hover:text-emerald-700"
-                        href={`tel:${m.phone.replace(/\s/g, "")}`}
-                      >
-                        <PhoneIcon /> {m.phone}
-                      </a>
-                    )}
-                  </a>
-                  {m.email && (
-                  <a
-                    className="inline-flex items-center gap-2 hover:text-emerald-700"
-                    href={`mailto:${m.email}`}
-                  >
-                    <MailIcon /> {m.email}
-                  </a>
-  )}          
+
+                {/* Spécialités */}
+                <div className="flex flex-wrap gap-1">
+                  {(m.specialties[lang] ?? m.specialties.fr).map((s) => (
+                    <Badge key={s}>{s}</Badge>
+                  ))}
                 </div>
               </article>
             ))}
@@ -1162,7 +1196,7 @@ export default function SiteKineBelleVue() {
         />
         <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="rounded-2xl border border-slate-200 bg-white/80 p-6 shadow-sm">
-            <div className="space-y-3 text-sm text-slate-700 flex flex-col ">
+            <div className="space-y-3 text-sm text-slate-700 flex flex-col">
               <p className="inline-flex items-center gap-2">
                 <MapPinIcon /> {t.contactAddressLabel}: {CLINIC.address.street},{" "}
                 {CLINIC.address.city}, {CLINIC.address.country}
@@ -1261,7 +1295,7 @@ function ContactForm({ t }) {
     const subject = encodeURIComponent(
       (langLabelFromCode(document.documentElement.lang) || "Demande") +
         " – " +
-        name
+        name,
     );
     const body = encodeURIComponent(`${message}\n\n—\n${name}\n${email}`);
     window.location.href = `mailto:${CLINIC.email}?subject=${subject}&body=${body}`;
@@ -1373,12 +1407,10 @@ function openPrivacy() {
       </div>
       <div class="mt-4 text-sm text-slate-700 space-y-2">
         <p>Nous collectons uniquement les informations nécessaires pour vous répondre (nom, e-mail, contenu du message). Elles ne sont jamais partagées à des tiers et sont conservées le temps du traitement de votre demande.</p>
-        <p>Conformément au RGPD, vous disposez d’un droit d’accès, de rectification et de suppression de vos données : écrivez-nous à <a class="text-emerald-700 underline" href="mailto:${CLINIC.email}">${CLINIC.email}</a>.</p>
-        <p>Cookies : ce site n’utilise que des cookies techniques indispensables au fonctionnement (aucun traçeur publicitaire).</p>
+        <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données : écrivez-nous à <a class="text-emerald-700 underline" href="mailto:${CLINIC.email}">${CLINIC.email}</a>.</p>
+        <p>Cookies : ce site n'utilise que des cookies techniques indispensables au fonctionnement (aucun traçeur publicitaire).</p>
       </div>
     </div>
   `;
   document.body.appendChild(wrapper);
 }
-          {/* Mobile/compact navigation (if present) */}
-          {/* If you have a mobile or compact nav, add the Installation link after Services here as well */}
