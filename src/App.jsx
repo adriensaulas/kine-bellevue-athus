@@ -626,7 +626,7 @@ function BaseIcon({ children }) {
 function LogoBelleVue({ className }) {
   return (
     <img
-      src="public/photos/logo.png"
+      src="photos/logo.png"
       alt="Logo Centre de Kiné Belle-Vue"
       className={className}
     />
