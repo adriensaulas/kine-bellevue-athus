@@ -1177,7 +1177,7 @@ export default function SiteKineBelleVue() {
               <img
                 src={img.src}
                 alt={img.label[lang] ?? img.label.fr}
-                className="h-56 w-full object-cover"
+                className="h-96 w-full object-cover"
               />
               <figcaption className="px-4 py-3 text-sm text-slate-700">
                 {img.label[lang] ?? img.label.fr}
