@@ -509,7 +509,7 @@ const TEAM = [
     languages: ["FR", "EN"],
     specialties: {
       fr: [
-        "Kiné général",
+        "Kiné générale",
         "Ortho-traumato",
         "Kiné sportive",
         "Thérapie manuelle",
@@ -1081,10 +1081,13 @@ export default function SiteKineBelleVue() {
               key={s.id}
               className="h-full rounded-2xl border border-slate-200 bg-white/80 p-5 shadow-sm"
             >
-              <s.icon />
-              <h3 className="mt-3 text-lg font-semibold text-slate-900">
-                {s.title[lang] ?? s.title.fr}
-              </h3>
+              <div className="flex items-center gap-4">
+                {s.icon && <s.icon />}
+                <h3 className="text-lg font-semibold text-slate-900 self-center">
+                  {s.title[lang] ?? s.title.fr}
+                </h3>
+              </div>
+
               <p className="mt-1 text-sm text-slate-600">
                 {s.desc[lang] ?? s.desc.fr}
               </p>
