@@ -15,7 +15,7 @@ const LANGS = [
 
 const I18N = {
   fr: {
-    slogan: "Le mouvement comme thérapie.",
+    slogan: "Le mouvement comme thérapie",
     metaDescription:
       "Centre de kinésithérapie à Athus : rééducation orthopédique, sportive, respiratoire, périnatalité, drainage lymphatique. Prise de rendez-vous rapide.",
     heroTitle: "Votre centre de kinésithérapie à Athus",
@@ -71,7 +71,7 @@ const I18N = {
     footerPrivacy: "Politique de confidentialité",
   },
   en: {
-    slogan: "Movement as therapy.",
+    slogan: "Movement as therapy",
     metaDescription:
       "Physiotherapy clinic in Athus: orthopaedic, sports, respiratory, perinatal care and lymphatic drainage. Fast appointments.",
     heroTitle: "Your physiotherapy centre in Athus",
@@ -126,7 +126,7 @@ const I18N = {
     footerPrivacy: "Privacy policy",
   },
   lb: {
-    slogan: "Beweegung als Therapie.",
+    slogan: "Beweegung als Therapie",
     metaDescription:
       "Kinésitherapie-Zenter zu Athus: orthopädesch, Sport-, Otem- an peri-natal Behandlungen.",
     heroTitle: "Äre Kiné-Zenter zu Athus",
@@ -181,7 +181,7 @@ const I18N = {
     footerPrivacy: "Dateschutz",
   },
   pt: {
-    slogan: "O movimento como terapia.",
+    slogan: "O movimento como terapia",
     metaDescription:
       "Centro de fisioterapia em Athus: reabilitação ortopédica, desportiva, respiratória, perinatal e drenagem linfática.",
     heroTitle: "O seu centro de fisioterapia em Athus",
@@ -240,10 +240,10 @@ const I18N = {
 
 const CLINIC = {
   name: "Centre de Kiné Belle-Vue",
-  sloganFallback: "Le mouvement comme thérapie.",
+  sloganFallback: "Le mouvement comme thérapie",
   domain: "kine-athus.be",
   phone: "+32 63 37 20 88",
-  email: "info@kinebellevue.com",
+  email: "centrekinebellevue@gmail.com",
   address: {
     street: "Avenue de la Libération 39",
     city: "6791 Athus",
